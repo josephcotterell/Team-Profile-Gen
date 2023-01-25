@@ -35,10 +35,46 @@ const addManager = () => {
     {
         type: "input",
         name: "email",
-        message: "what is the manager email address?"
+        message: "what is the manager email address?",
 
 
-    }
+    },
 
-  });
+    {
+type: "input",
+name: "manager office number",
+message: "what is the manager office number?",
+
+
+    },
+
+).then ((answers) => {
+const newManager = new Manager (
+answers.managerName,
+answers.managerID,
+answers.managerEmail,
+answers.managerOfficeNumber,
+
+);
+
+teamManagerName = answers.managerName;
+teamMembers.push(newManager);
+menu()
+
+const addEmployee = () => {
+    console.log(`
+    Add employee`);
+
+return inquirer.prompt({
+    type: 'list',
+    name: 'role',
+    message:'please choose the employees role',
+    choices: ['Engineer, Intern,']
+
+
+});
+
+
+    
+})
 };
