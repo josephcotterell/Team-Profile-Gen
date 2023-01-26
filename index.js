@@ -9,7 +9,6 @@ const Employee = require("./lib/employee");
 
 //generate HTML
 const generateHTML = require("./src/generateHTML");
-const { default: inquirer } = require("inquirer");
 const { type } = require("os");
 
 //team
